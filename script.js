@@ -1,5 +1,6 @@
-function sum(num1, num2) {
-    document.write( num1+num2);
-}
+function howManyLetters(phrase) {
+    var count = phrase.length;
+    return count;
+};
 
-sum(5, 9);  
+document.write(howManyLetters("Pasindu"));
