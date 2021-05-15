@@ -24,7 +24,7 @@ document.querySelector(".js-userinput").addEventListener('keyup', function(e) {
 
 //Getting input form API
 
-var url = "http://api.giphy.com/v1/gifs/search?q=sri+lanka&api_key=ULQF8JPwR4gD5R3LXPi3ehqdkAG5wkfE";
+var url = "https://api.giphy.com/v1/gifs/search?q=sri+lanka&api_key=ULQF8JPwR4gD5R3LXPi3ehqdkAG5wkfE";
 
 // AJAX Request
 var GiphyAJAXCall = new XMLHttpRequest();
