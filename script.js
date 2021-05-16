@@ -3,6 +3,8 @@
 document.querySelector(".js-go").addEventListener('click', function() {
 
     var input = document.querySelector("input").value;
+    
+    searchTerm(input);
     pushToDOM(input);
 
 });
@@ -13,9 +15,11 @@ document.querySelector(".js-userinput").addEventListener('keyup', function(e) {
 
     // if the key "enter" is pressed...
     if(e.which == 13) {
+
+    searchTerm(input);
     pushToDOM(input);
     }
-
+    
 });
 
 
@@ -23,8 +27,8 @@ document.querySelector(".js-userinput").addEventListener('keyup', function(e) {
 
 
 //Getting input form API
-
-var url = "https://api.giphy.com/v1/gifs/search?q=sri+lanka&api_key=ULQF8JPwR4gD5R3LXPi3ehqdkAG5wkfE";
+function searchTerm(search)  {
+var url = "https://api.giphy.com/v1/gifs/search?q="+search+"&api_key=ULQF8JPwR4gD5R3LXPi3ehqdkAG5wkfE";
 
 // AJAX Request
 var GiphyAJAXCall = new XMLHttpRequest();
@@ -36,7 +40,8 @@ GiphyAJAXCall.addEventListener('load', function(e) {
     var data = e.target.response;;
     pushToDOM(data);
 })
-
+console.log(url);
+}
 
 //Showing GIFs
 
